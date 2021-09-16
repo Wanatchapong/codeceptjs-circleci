@@ -29,7 +29,14 @@ exports.config = {
     I: './steps_file.js',
   },
   bootstrap: null,
-  mocha: {},
+  mocha: {
+    reporter: 'mochawesome',
+    reporterOptions: {
+      reportDir: './reports',
+      reportName: 'api_testing_report',
+      reportTitle: 'APIs Testing Report',
+    },
+  },
   name: 'codeceptjs-circleci',
   plugins: {
     pauseOnFail: {},
