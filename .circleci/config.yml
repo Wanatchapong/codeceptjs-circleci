@@ -12,6 +12,11 @@ jobs:
       - checkout
       - node/install-packages
       - run:
+          name: Create ENV file
+          command: |
+            touch .env
+            echo "BASE_URL=$BASE_URL" > .env
+      - run:
           command: npm run codeceptjs
 
 workflows:
