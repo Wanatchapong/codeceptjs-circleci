@@ -1,2 +1,1 @@
-# codeceptjs-circleci
-Example CodeceptJS and CircleCI
+# 🧪 API Testing with CodeceptJS ✨ and CircleCI 🚀

@@ -1,0 +1,20 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.7.0
+
+jobs:
+  codeceptjs_test:
+    executor:
+      name: node/default
+      tag: '14.7'
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          command: npm run codeceptjs
+
+workflows:
+  test_api:
+    jobs:
+      - codeceptjs_test
